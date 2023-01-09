@@ -1,0 +1,45 @@
+<style>
+    .maincontainer {
+     background:linear-gradient(to top, #EC407A,#673AB7);
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+ 
+   .box {
+     width: 500px;
+     height: auto;
+     background: linear-gradient(#673AB7, #EC407A);
+     border-radius: 20px;
+     padding: 20px;
+ 
+   }
+ 
+   
+ </style>
+ <html>
+    <link rel="icon" type="image/x-icon" href="/images/1.png">
+    <div class="maincontainer">
+    <center>
+       
+     <form action="/product/editimage" method="post" enctype="multipart/form-data">
+     <input type="hidden" value="<%=data.productid%>" name="productid">
+    
+       <div class="box">
+     <h3>Product Id : <%=data.productid%></h3>
+    
+     <h3>Product Name : <%=data.productname%></h3>
+    
+     <img src="/images/<%=data.picture%>" width="250"><br><br>
+     <b>Upload New Image:</b><br><br>
+     <input type="file" required name="picture"><br><br>
+     <input type="Submit" value="Upload New Image">
+     </div>
+    
+     </form>
+    
+    </center>
+ </div>
+ </html>
